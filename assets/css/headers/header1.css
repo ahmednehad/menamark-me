@@ -1,0 +1,278 @@
+/*Top Bar (login, search etc.)
+------------------------------------*/
+
+.top {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #722181;
+}
+
+/*Header (logo and menu)
+------------------------------------*/
+
+.header {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/*Menu*/
+.header {
+    position: relative;
+    z-index: 999;
+    padding: 10px 0;
+    background-color: rgba(255,255,255,0.95);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.header.is-sticky {
+    width: 100%;
+    padding: 0;
+}
+
+.header .navbar {
+    border-color: transparent;
+    background-color: transparent;
+    margin-bottom: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.header .navbar .container {
+    position: relative;
+}
+
+.header .navbar .nav > li > a {
+    display: block;
+    border-bottom: solid 2px transparent;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .header .navbar-header {
+        padding-left: 0;
+    }
+}
+
+.header .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.header .collapse.in ul {
+    margin-top: 10px !important;
+}
+
+.header .collapse.in li a {
+    padding: 0 10px;
+    border-bottom: solid 1px #eee;
+    background: none;
+}
+
+.header .collapse.in li a:hover,
+.header .collapse.in li a.dropdown-toggle {
+    border-bottom: solid 1px #722181 !important;
+    background: none;
+}
+
+.header .collapse.in ul.dropdown-menu {
+    margin-bottom: 5px;
+}
+
+.header .collapse.in ul.dropdown-menu a {
+    padding: 5px;
+    border-bottom: solid 1px #bbb;
+}
+
+.header .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.header .navbar .nav > li > a:focus,
+.header .navbar .nav > li > a:hover {
+    color: #722181;
+}
+.header .navbar .nav > li > a:focus:after,
+.header .navbar .nav > li > a:hover:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    margin-left: -15px;
+    background-color: #722181;
+}
+
+@media (max-width: 767px) {
+    .header .navbar .nav > li > a:focus:after,
+    .header .navbar .nav > li > a:hover:after {
+        display: none;
+    }
+}
+
+.header .navbar .nav > .active > a,
+.header .navbar .nav > .active > a:focus {
+    color: #000000;
+    text-decoration: none;
+    background: none;
+}
+
+.header .navbar .nav > .active > a:hover {
+    color: #722181;
+    background: none;
+}
+
+.header .navbar-nav > .open > a,
+.header .navbar-nav > .open > a:hover,
+.header .navbar-nav > .open > a:focus {
+    background-color: transparent;
+}
+
+.header .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+    .header .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+/*Arrow for menu*/
+.header .navbar .nav > li > a .caret {
+    border: none;
+}
+
+/*Dropdown Menu*/
+.header .dropdown-menu {
+    padding: 0;
+    border: none;
+    margin-top: 11px !important;
+    min-width: 200px;
+    border-radius: 0;
+    border-top: solid 2px #e5e5e5;
+    border-bottom: none;
+    z-index: 9999 !important;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.176);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.176);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.176);
+}
+
+.header .dropdown-menu li a {
+    color: #292929;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 8px 15px;
+}
+
+.header .dropdown-menu li > a:hover,
+.header .dropdown-menu li > a:focus,
+.header .dropdown-submenu:hover > a {
+    color: #722181;
+    background: none;
+}
+
+.header .dropdown-menu > .active > a,
+.header .dropdown-menu > .active > a:hover,
+.header .dropdown-menu > .active > a:focus {
+    color: #722181;
+    background: none;
+}
+
+/*Serach*/
+.header .navbar .search-open {
+    right: 0;
+    top: 63px;
+    display: none;
+    padding: 15px;
+    position: absolute;
+    background: #fcfcfc;
+    border-top: solid 2px #eee;
+    max-width: 300px;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.176);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.176);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.176);
+}
+
+@media (max-width: 767px) {
+    .header .navbar .search-open {
+        right: auto;
+        top: auto;
+        left: 90px;
+        bottom: 0;
+        padding: 8px;
+        border: none;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.header .navbar .search-open form,
+.header .navbar .search-open .input-append {
+    margin: 0 !important;
+}
+
+.header .navbar a.search i {
+    /**/
+}
+
+.header .navbar .nav > li > a.search {
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer;
+    color: #aaa;
+    border: solid 2px #eeeeee;
+    /*background: #f7f7f7;*/
+    /*padding: 8px 12px 10px;*/
+    padding: 0;
+    text-align: center;
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+
+}
+
+@media (max-width: 767px) {
+    .header .navbar .nav > li > a.search {
+        margin-left: 15px;
+    }
+}
+
+.header .navbar .nav > li > a.search:hover {
+    color: #722181;
+    border-color: #722181;
+}
+
+.header .navbar .nav > li > a.search:hover:after {
+    display: none;
+}
+
+.header .navbar .nav > li > a.search .search-btn {
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+}
+
+/*Fancybox for gallery page*/
+.fancybox-overlay.fancybox-overlay-fixed {
+    z-index: 9999;
+}
