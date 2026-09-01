@@ -2,6 +2,12 @@
 
 import { useEffect, type ReactNode } from 'react'
 
+declare global {
+  interface Window {
+    __lenis?: import('lenis').default
+  }
+}
+
 export function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -23,6 +29,8 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
         prevent: (node: HTMLElement) =>
           node.closest('[data-lenis-prevent]') !== null,
       })
+      // Expose so overlays (e.g. the leadership modal) can stop/start it while open
+      window.__lenis = lenis
 
       function raf(time: number) {
         lenis!.raf(time)
@@ -34,6 +42,7 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
     return () => {
       if (rafId) cancelAnimationFrame(rafId)
       lenis?.destroy()
+      window.__lenis = undefined
     }
   }, [])
 

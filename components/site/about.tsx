@@ -51,10 +51,30 @@ export function About() {
   const [tapped, setTapped]   = useState<string | null>(null)
   const [active, setActive]   = useState<typeof leaders[0] | null>(null)
 
-  // Lock body scroll when modal is open
+  // Lock scroll when modal is open — stop Lenis so its raf loop doesn't fight
+  // the native lock, and freeze body position so iOS can't scroll-through.
   useEffect(() => {
-    document.body.style.overflow = active ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    if (!active) return
+    const scrollY = window.scrollY
+    window.__lenis?.stop()
+    const { style } = document.body
+    style.position = 'fixed'
+    style.top = `-${scrollY}px`
+    style.left = '0'
+    style.right = '0'
+    style.overflow = 'hidden'
+    return () => {
+      style.position = ''
+      style.top = ''
+      style.left = ''
+      style.right = ''
+      style.overflow = ''
+      // Native jump first (locking the body collapses document height, which left
+      // Lenis's cached scroll limit stale/zeroed — resize() refreshes it before resuming).
+      window.scrollTo({ top: scrollY, left: 0, behavior: 'instant' })
+      window.__lenis?.resize()
+      window.__lenis?.start()
+    }
   }, [active])
 
   // Dispatch: touch-primary devices tap-to-flip first; mouse devices open modal directly.
