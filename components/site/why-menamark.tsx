@@ -252,7 +252,7 @@ export function WhyMenamark() {
         <ComparisonTable />
 
         {/* ── Advantage cards ── */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <Reveal className="text-center">
             <h3 className="text-title font-bold text-foreground">
               The Case for One Regional Partner.
@@ -279,7 +279,7 @@ export function WhyMenamark() {
               </Reveal>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

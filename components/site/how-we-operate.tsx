@@ -5,27 +5,27 @@ const phases = [
   {
     number: '01',
     title: 'Market Assessment & Opportunity Sizing',
-    desc: 'Before any resource is committed, MENAMark conducts a structured evaluation of the commercial opportunity: regulatory landscape, pricing environment, competitive positioning, market sizing, and entry sequencing across target GCC and MENA markets.',
+    //desc: 'Before any resource is committed, MENAMark conducts a structured evaluation of the commercial opportunity: regulatory landscape, pricing environment, competitive positioning, market sizing, and entry sequencing across target GCC and MENA markets.',
   },
   {
     number: '02',
     title: 'Distributor Search & Appointment',
-    desc: 'MENAMark identifies, evaluates, and conducts commercial due diligence on qualified distributors in each target market. We lead contract negotiations, define performance frameworks, and formally appoint each distributor — building a direct, exclusive relationship between MENAMark and the distributor in every market.',
+    //desc: 'MENAMark identifies, evaluates, and conducts commercial due diligence on qualified distributors in each target market. We lead contract negotiations, define performance frameworks, and formally appoint each distributor — building a direct, exclusive relationship between MENAMark and the distributor in every market.',
   },
   {
     number: '03',
     title: 'Market Access & Registration Coordination',
-    desc: 'MENAMark develops the registration strategy and manages the technical documentation needed by the appointed local distributor — who acts as the legal applicant in each market — with MENAMark coordinating every step. We supervise timelines, facilitate authority alignment, and support pricing file preparation.',
+    //desc: 'MENAMark develops the registration strategy and manages the technical documentation needed by the appointed local distributor — who acts as the legal applicant in each market — with MENAMark coordinating every step. We supervise timelines, facilitate authority alignment, and support pricing file preparation.',
   },
   {
     number: '04',
     title: 'Commercial Launch',
-    desc: 'MENAMark leads the go-to-market plan: pricing strategy, launch sequencing, KOL engagement, field force deployment, product training, congress participation, and the first tender submissions — all coordinated regionally and executed locally.',
+    //desc: 'MENAMark leads the go-to-market plan: pricing strategy, launch sequencing, KOL engagement, field force deployment, product training, congress participation, and the first tender submissions — all coordinated regionally and executed locally.',
   },
   {
     number: '05',
     title: 'Ongoing Commercial Operations & Growth',
-    desc: 'Post-launch, MENAMark assumes full regional commercial management: distributor performance monitoring, forecast coordination, competitive intelligence, marketing execution, tender management, and ongoing business development — driving year-on-year growth across the portfolio.',
+    //desc: 'Post-launch, MENAMark assumes full regional commercial management: distributor performance monitoring, forecast coordination, competitive intelligence, marketing execution, tender management, and ongoing business development — driving year-on-year growth across the portfolio.',
   },
 ]
 
@@ -73,7 +73,7 @@ export function HowWeOperate() {
           </h2>
         </Reveal>
 
-        <Reveal delay={1} className="mx-auto mt-6 max-w-3xl text-center">
+        {/* <Reveal delay={1} className="mx-auto mt-6 max-w-3xl text-center">
           <p className="text-pretty leading-relaxed text-muted-foreground">
             MENAMark&apos;s operating model is structurally distinct from a distributor, a consulting
             firm, and a regulatory affairs agency. It is the layer of regional commercial leadership
@@ -94,7 +94,7 @@ export function HowWeOperate() {
               never interchangeable.
             </p>
           </div>
-        </Reveal>
+        </Reveal> */}
 
         {/* ── 5-step timeline ── */}
         <div className="mt-20">
@@ -162,7 +162,7 @@ export function HowWeOperate() {
         </div>
 
         {/* ── 2-column split: MENAMark vs Distributor ── */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <Reveal className="text-center">
             <h3 className="text-title font-bold text-foreground">
               How MENAMark Operates on Your Behalf.
@@ -208,7 +208,7 @@ export function HowWeOperate() {
               </div>
             </Reveal>
           </div>
-        </div>
+        </div> */}
 
         {/* Present Where Your Products Need to Be */}
         <Reveal delay={1}>

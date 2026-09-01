@@ -9,8 +9,8 @@ import { Label } from '@/components/ui/label'
 import { Reveal } from './reveal'
 
 const contactInfo = [
-  { icon: Phone, label: 'Phone', value: '[ Phone number — placeholder ]' },
-  { icon: Mail, label: 'Email', value: '[ Email address — placeholder ]' },
+  //{ icon: Phone, label: 'Phone', value: '[ Phone number — placeholder ]' },
+  { icon: Mail, label: 'Email', value: 'info@menamark-me.com' },
   { icon: MapPin, label: 'Office', value: 'Dubai Science Park | Dubai, UAE' },
 ]
 
