@@ -313,7 +313,7 @@ export function About() {
         </AnimatePresence>
 
         {/* ── Kuwait Track Record ── */}
-        <div className="mt-20 border-t border-border pt-16">
+        {/*<div className="mt-20 border-t border-border pt-16">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
               <p className="font-heading text-sm font-bold uppercase tracking-widest text-primary">
@@ -378,7 +378,7 @@ export function About() {
               </div>
             </Reveal>
           </div>
-        </div>
+        </div>*/}
 
       </div>
     </section>
